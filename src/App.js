@@ -5,8 +5,7 @@ function App() {
   return (
     <div className="App">
        <p>
-            This is new title
-            new text
+          this is my final msg
         </p>
     </div>
   );
