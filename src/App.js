@@ -6,6 +6,7 @@ function App() {
     <div className="App">
        <p>
             This is new title
+            new text
         </p>
     </div>
   );
