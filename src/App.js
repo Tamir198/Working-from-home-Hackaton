@@ -5,8 +5,7 @@ function App() {
   return (
     <div className="App">
        <p>
-            This is new title
-            this will create conflict
+          this is my final msg
         </p>
     </div>
   );
