@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
        <p>
-            Working from home   
+            This is new title
         </p>
     </div>
   );
