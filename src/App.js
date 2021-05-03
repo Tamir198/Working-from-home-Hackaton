@@ -3,10 +3,11 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="This is new title">
        <p>
           this is my final msg
-          this will create conflict
+          Final smg
+
         </p>
     </div>
   );
