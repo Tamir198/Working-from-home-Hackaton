@@ -6,6 +6,7 @@ function App() {
     <div className="App">
        <p>
           this is my final msg
+          this will create conflict
         </p>
     </div>
   );
