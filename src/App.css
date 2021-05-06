@@ -1,0 +1,28 @@
+.buttons button{
+    background-color:green;
+    outline:none;
+    padding:2rem;
+    color:white;
+    margin:1rem;
+    border:2px solid black;
+    border-radius: 30px;
+}
+.buttons button:hover{
+    background-color: rgb(4, 90, 4);
+    cursor: pointer;
+}
+.buttons{
+    display:flex;
+    flex-wrap: wrap;
+}
+.app{
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-footer .MuiButtonBase-root{
+    margin:0 1rem;
+}
