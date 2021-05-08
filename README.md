@@ -1,7 +1,7 @@
 Easy zoom:
 -
 
-This app was made duiring the [MTA Hack](https://www.linkedin.com/company/mtahack/), our team has won 1st place for the idea.
+This app was made during the [MTA Hack](https://www.linkedin.com/company/mtahack/), our team has won 1st place for the idea.
 
 
 <p float="left">
