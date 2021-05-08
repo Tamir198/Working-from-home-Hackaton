@@ -1,8 +1,6 @@
 Easy zoom:
 -
 
-
-
 This app was made during the [MTA Hack 2021](https://www.linkedin.com/company/mtahack/)
 The idea and the execution earned us the 1st prize of the Hackathon!
 
@@ -16,7 +14,6 @@ such as: Muting participants, Checking attendance, Creating a chat room, Sharing
 further options can be added upon demand and availability within the Zoom API.
 
 The UI is designed to be as simple as possible. Clean, Clear, Large buttons with text information. The UI is currently in Hebrew to provide solution for Hebrew speaking teachers.
-
 
 <p float="left">
 
