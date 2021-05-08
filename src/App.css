@@ -1,0 +1,68 @@
+.header{
+    padding:1.3rem;
+    position: relative;
+    width:100%;
+    text-align: center;
+    color:white;
+    background-size: contain;
+    background: repeating-linear-gradient(
+  -55deg,
+  #222,
+  #222 10px,
+  #333 10px,
+  #333 20px
+)
+}
+.header h1{
+    z-index: 2;
+}
+#wolf{
+    
+    width:70px;
+
+}
+
+
+.buttons button{
+    background-color:green;
+    outline:none;
+    padding:2rem;
+    color:white;
+    font-size:1.5rem;
+    margin:1rem;
+    border:2px solid black;
+    border-radius: 30px;
+}
+.buttons button:hover{
+    background-color: rgb(4, 90, 4);
+    cursor: pointer;
+}
+.whatsappButton
+{
+    display:flex;
+    flex-direction: column;
+}
+.fa-lg{
+    font-size:1.3rem;
+    padding-top:3px;
+}
+.buttons{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+}
+.app{
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.modal-footer .MuiButtonBase-root{
+    margin:0 1rem;
+}

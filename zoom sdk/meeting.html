@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Zoom WebSDK</title>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.9.1/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.9.1/css/react-select.css" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="origin-trial" content="">
+</head>
+<style>
+    /* .meeting-app{
+        display:none!important;
+    }
+    #test{
+        display:block!important;
+        z-index: 99999!important;
+        color:black;
+        font-size:5215rem;
+    }
+    .root-inner
+    {
+        background-color: white;
+    } */
+</style>
+
+<body>
+    
+    
+    <button id="muteSelf" style="border:solid;width:100px;height:100px;margin:10px;" onclick="muteSelf()">השתק את
+        עצמי</button>
+        <button id="muteAll" style="border:solid;width:100px;height:100px;margin:10px;" onclick="muteAll()">השתק את
+            כולם</button>
+            
+            
+            <button id="getCurrentMeetingInfo" style="border:solid;width:100px;height:100px;margin:10px;"
+            onclick="getCurrentMeetingInfo()">? מה שם החדר</button>
+            
+            <button id="getAttendeeslist" style="border:solid;width:100px;height:100px;margin:10px;" onclick="getAttendeeslist()">Check attendees</button>
+            <button style="border:solid" style="border:solid;width:100px;height:100px;margin:10px;" onclick="endMeeting()">End Meeting </button>
+
+
+    <script src="https://source.zoom.us/1.9.1/lib/vendor/react.min.js"></script>
+    <script src="https://source.zoom.us/1.9.1/lib/vendor/react-dom.min.js"></script>
+    <script src="https://source.zoom.us/1.9.1/lib/vendor/redux.min.js"></script>
+    <script src="https://source.zoom.us/1.9.1/lib/vendor/redux-thunk.min.js"></script>
+    <script src="https://source.zoom.us/1.9.1/lib/vendor/lodash.min.js"></script>
+    <script src="https://source.zoom.us/zoom-meeting-1.9.1.min.js"></script>
+    <script src="js/tool.js"></script>
+    <script src="js/vconsole.min.js"></script>
+    <script src="js/meeting.js"></script>
+
+    <script>
+        const simd = async () => WebAssembly.validate(new Uint8Array([0, 97, 115, 109, 1, 0, 0, 0, 1, 4, 1, 96, 0, 0, 3, 2, 1, 0, 10, 9, 1, 7, 0, 65, 0, 253, 15, 26, 11]))
+        simd().then((res) => {
+            console.log("simd check", res);
+            document.getElementById("zmmtg-root").style.display = "none";
+
+        });
+    </script>
+
+    <script>
+        ////////////////////////////////////////////////////////////
+
+        function muteSelf() {
+            console.log("MUTE SELF FUNCTION!");
+            ZoomMtg.getCurrentUser({
+                success: function (res) {
+
+                    ZoomMtg.mute({
+                        userId: res.result.currentUser.userId,
+                        mute: true
+                    });
+                }
+            })
+        }
+        ////////////////////////////////////////////////////////////
+        function muteAll() {
+            console.log("MUTE ALL FUNCTION!");
+
+            ZoomMtg.muteAll({
+                muteAll: true,
+                success: function (res) {
+                    console.log("success getCurrentUser");
+                },
+            });
+
+
+        }
+        /////////////////////////////////////////////////////////////////
+        function getCurrentMeetingInfo() {
+            console.log("getCurrentMeetingInfo FUNCTION!");
+            ZoomMtg.getCurrentMeetingInfo({
+                success: function (res) {
+                    alert(res.result.meetingTopic)
+                    //TODO display meeting info to the screen/ send as exel/google drive...
+                }
+            })
+        }
+        ///////////////////////////////////////////////////////////////
+        function getAttendeeslist() {
+            console.log("getAttendeeslist FUNCTION!");
+            ZoomMtg.getAttendeeslist({
+                success: function (res) {
+                    //TODO PUT ATTENDEES LIST INTO OBJECT
+                    console.log(res)
+                    res.result.attendeesList.forEach(obj => {
+                        console.log(obj.userName);
+                    })
+                }
+            })
+        }
+        
+        
+        
+        
+        //////////////////////////////
+        
+
+//////////////////////////////////////////////////////////
+function endMeeting() {
+				console.log("getCurrentMeetingInfo FUNCTION!");
+				ZoomMtg.endMeeting({
+					success: function (res) {
+					}
+				})
+            }   
+
+/////////////////////////////////////////////////////////
+
+    </script>
+
+
+</body>
+
+</html>
