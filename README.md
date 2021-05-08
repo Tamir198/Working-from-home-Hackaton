@@ -1,8 +1,6 @@
 Easy zoom:
 -
 
-
-
 This app was made during the [MTA Hack 2021](https://www.linkedin.com/company/mtahack/).
 
 The idea and the execution earned us the 1st prize of the Hackathon!
