@@ -22,3 +22,4 @@ The UI is designed to be as simple as possible. Clean, Clear, Large buttons with
 <img src="https://user-images.githubusercontent.com/34707669/117541539-02a77080-b01d-11eb-84d6-9e866cc4a773.png" height="450">
 
 </p>
+.
