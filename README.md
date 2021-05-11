@@ -1,4 +1,4 @@
-Easy zoom:
+ Easy zoom:
 -
 
 This app was made during the [MTA Hack 2021](https://www.linkedin.com/company/mtahack/).
